@@ -5,12 +5,12 @@ import Paper from "@mui/material/Paper";
 import { styled } from "@mui/material/styles";
 import CardMedia from "@mui/material/CardMedia";
 import image1 from "../components/images/landscape1.jpg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Item = styled(Paper)(() => ({
   borderRadius: "none",
   boxShadow: "none",
-  borderBox: "boxZize",
+  boxSizing: "border-box",
 }));
 
 function Home() {
@@ -25,7 +25,7 @@ function Home() {
             <Typography variant="h2">and I am a Front End Developer</Typography>
             <PrimaryButton
               variant="contained"
-              href="/contact"
+              onClick={() => navigate("/contact")}
               sx={{ marginTop: "2rem" }}
             >
               Contact me
